@@ -142,15 +142,7 @@ O banco usado é o Oracle acadêmico da FIAP, já provisionado na nuvem. A conex
 3. Rode `python main.py --oracle`.
 4. No SQL Developer, crie uma conexão com o mesmo host, a mesma porta, o SID `ORCL` e o usuário da FIAP. As consultas de `sql/consultas.sql` podem ser coladas nessa sessão.
 
-Se a conta da FIAP não estiver disponível, a alternativa local é o Oracle Database Free em container:
 
-```bash
-docker run -d --name oracle-free -p 1521:1521 \
-  -e ORACLE_PWD=uma_senha \
-  container-registry.oracle.com/database/free:latest
-```
-
-Nesse caso o `.env` aponta o host para `localhost`. A imagem publica o serviço `FREEPDB1`, e o programa desta entrega conecta por SID. O caminho testado foi a nuvem da FIAP.
 
 ### Tabelas
 
